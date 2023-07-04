@@ -4,67 +4,27 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+# Stolen shamelessly from https://github.com/andrew8088/dotfiles/blob/main/zsh/rc.zsh
+source_if_exists () {
+    if test -r "$1"; then
+        source "$1"
+    fi
+}
 
 # oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
-
-
-# Other themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+source $ZSH/oh-my-zsh.sh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-
-# zstyle ':omz:update' mode disabled  # Auto Update Off
-# zstyle ':omz:update' mode auto      # Auto Update On
 zstyle ':omz:update' mode reminder    # Auto Update Remind
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
+zstyle ':omz:update' frequency 14 # Auto Update Frequency
 
 ENABLE_CORRECTION="true" # Command Auto Correction
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
+COMPLETION_WAITING_DOTS="true" # Red Waiting Dots 
 
 ZSH_CUSTOM=~/.zshplugs #ZSH Custom Plugin Dir
-
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 
 plugins=(git iterm2 brew fzf-tab poetry)
 
@@ -72,27 +32,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Personal zsh config
 
-
-# export LANG=en_US.UTF-8 # Here in case needed in future
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-
 # Alias
 alias vim=nvim
 alias vi=nvim
 # ^ Will Need to move to ZSH/Custom eventually ^
 
 
-source /Users/isaacgrannis/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source_if_exists $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #History Customization
 setopt HIST_IGNORE_SPACE
@@ -108,14 +54,14 @@ export HOMEBREW_NO_ENV_HINTS=TRUE
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # PATH Stuff
-export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/devkitpro/tools/bin
-test -e /Users/isaacgrannis/.iterm2_shell_integration.zsh && source /Users/isaacgrannis/.iterm2_shell_integration.zsh || true
-
+export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 path=("/opt/homebrew/opt/python/libexec/bin" $path)
 path=("/opt/homebrew/sbin" $path)
 path=("/opt/homebrew/bin" $path)
 path=("/Users/isaacgrannis/.local/bin" $path)
+path+=("/usr/local/MacGPG2/bin")
+path+=("/opt/devkitpro/tools/bin")
 export PATH
 
 # >>> conda initialize >>>

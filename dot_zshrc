@@ -34,6 +34,7 @@ source $ZSH/oh-my-zsh.sh
 
 source_if_exists $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source_if_exists $HOME/zsh/aliases.zsh
+source_if_exists $HOME/zsh/env
 
 #History Customization
 setopt HIST_IGNORE_SPACE

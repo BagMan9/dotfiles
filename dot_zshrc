@@ -31,11 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Personal zsh config
 
-# Alias
-alias vim=nvim
-alias vi=nvim
-# ^ Will Need to move to ZSH/Custom eventually ^
-
 
 source_if_exists $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

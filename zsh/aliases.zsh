@@ -10,7 +10,11 @@ function addsecret () {
   chezmoi add --template $1 
   echo "{\"organizationId\":null,\"folderId\":null,\"type\":2,\"name\":\"$2\",\"notes\":\"$(cat $1 | base64)\",\"favorite\":false,\"fields\":[],\"login\":null,\"secureNote\":{\"type\":0},\"card\":null,\"identity\":null}" | bw encode | bw create item
   chezmoi cd
-  echo "{{ (bitwarden "item" "$2").notes | b64dec }}" > $internalPath.tmpl
+  if  [ $# -eq 3 ]; then
+    echo "{{ (bitwarden "item" "$2").notes | b64dec }}" > $3
+  else
+    echo "{{ (bitwarden "item" "$2").notes | b64dec }}" > $internalPath.tmpl
+  fi
   exit
   bw lock
 }

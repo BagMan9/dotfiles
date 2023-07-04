@@ -28,7 +28,6 @@ ZSH_CUSTOM=~/.zshplugs #ZSH Custom Plugin Dir
 
 plugins=(git iterm2 brew fzf-tab poetry)
 
-source $ZSH/oh-my-zsh.sh
 
 # Personal zsh config
 

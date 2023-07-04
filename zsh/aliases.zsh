@@ -12,7 +12,7 @@ function addsecret () {
 }
 
 function pyenv-c () {
-  if [$1 = "new"]
+  if [ "$1" = "new"]
   then
     cp ~/Utils/environment.yml ./
     nvim environment.yml
@@ -23,14 +23,14 @@ function pyenv-c () {
     conda-lock -k explicit --conda mamba
   fi
 
-  if [$1 = "update"]
+  if [ "$1" = "update"]
   then
     conda-lock -k explicit --conda mamba
     mamba update --file conda-osx-arm64.lock
     poetry update
   fi
 
-  if [$1 = "pre"]
+  if ["$1" = "pre"]
   then
     conda create --name $2 --file conda-osx-arm64.lock
     conda activate $2

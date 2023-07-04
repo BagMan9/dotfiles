@@ -3,7 +3,7 @@ alias vim='nvim'
 alias vi='nvim'
 
 # Functions -------------------------------------------------------------------
-function AddSecret () {
+function addsecret () {
   local filepath="${1/#~\//}"
   local internalPath= $(echo "$filepath" | sed 's|/\.\([^/]*\)|/dot_\1|g')
   bw unlock

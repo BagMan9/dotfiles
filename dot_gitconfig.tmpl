@@ -1,9 +1,9 @@
 [user]
-	email = 115715725+BagMan9@users.noreply.github.com
+	email = {{ .gitemail }}
 	name = Isaac Grannis
 	signingkey = 9827C3A7F8C560A5
 [commit]
-	gpgsign = true
+	gpgsign = {{ .signing }}
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

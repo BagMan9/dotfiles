@@ -1,12 +1,20 @@
 # Aliases ---------------------------------------------------------------------
 alias vim='nvim'
 alias vi='nvim'
-
+alias bwsesh='export BW_SESSION=$(bw unlock --raw)'
 # Functions -------------------------------------------------------------------
 function addsecret () {
-  export BW_SESSION=$(bw unlock --raw)
+  local prevSession=0
+  if [$BW_SESSION = ""]
+  then
+    export BW_SESSION=$(bw unlock --raw)
+    local prevSession=1
+  fi
   echo "{\"organizationId\":null,\"folderId\":null,\"type\":2,\"name\":\"$2\",\"notes\":\"$(cat $1 | base64)\",\"favorite\":false,\"fields\":[],\"login\":null,\"secureNote\":{\"type\":0},\"card\":null,\"identity\":null}" | bw encode | bw create item 
-  bw lock
+  if [$prevSession = 0]
+  then
+    bw lock
+  fi
   echo "Echo the following into the template: {{ (bitwarden \"item\" \"$2\").notes | b64dec}"
 
 }

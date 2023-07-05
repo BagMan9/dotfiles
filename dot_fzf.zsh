@@ -1,3 +1,5 @@
+{{- if eq .chezmoi.os "darwin" }}
+
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
@@ -11,3 +13,4 @@ fi
 # Key bindings
 # ------------
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+{{- end }}

@@ -84,7 +84,12 @@ if [ -f "/Users/isaacgrannis/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/Users/isaacgrannis/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+path+=("/nix/var/nix/profiles/default/bin/")
 
 {{- end}}
 

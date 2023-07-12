@@ -26,7 +26,7 @@ ENABLE_CORRECTION="true" # Command Auto Correction
 COMPLETION_WAITING_DOTS="true" # Red Waiting Dots 
 ZSH_CUSTOM=~/.zshplugs #ZSH Custom Plugin Dir
 {{- if eq .chezmoi.os "darwin" }}
-plugins=(git brew fzf-tab poetry)
+plugins=(git fzf-tab poetry)
 {{- else }}
 plugins=(git fzf-tab poetry)
 {{- end }}
@@ -80,12 +80,12 @@ if [ -f "/Users/isaacgrannis/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 # Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
+# if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+#     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+# fi
 # End Nix
-path+=("/nix/var/nix/profiles/default/bin/")
-path+=("$HOME/.nix-profile/bin/")
-path+=("/run/current-system/sw/bin/")
+# path+=("/nix/var/nix/profiles/default/bin/")
+# path+=("$HOME/.nix-profile/bin/")
+# path+=("/run/current-system/sw/bin/")
 {{- end}}
 

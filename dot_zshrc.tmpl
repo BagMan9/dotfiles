@@ -43,8 +43,6 @@ source_if_exists $HOME/zsh/env
 setopt HIST_IGNORE_SPACE
 setopt no_hist_verify
 
-# Homebrew Customization
-export HOMEBREW_NO_ENV_HINTS=TRUE
 
 # P10K Load-in 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -55,9 +53,6 @@ export HOMEBREW_NO_ENV_HINTS=TRUE
 # PATH Stuff
 export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
 {{- if eq .chezmoi.os "darwin" }}
-path=("/opt/homebrew/opt/python/libexec/bin" $path)
-path=("/opt/homebrew/sbin" $path)
-path=("/opt/homebrew/bin" $path)
 path+=("/usr/local/MacGPG2/bin")
 {{- end }}
 path=("/$HOME/.local/bin" $path)

@@ -1,9 +1,9 @@
 # Aliases ---------------------------------------------------------------------
 alias bwsesh='export BW_SESSION=$(bw unlock --raw)'
 alias chezup='chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update'
-alias sysup='{{ .chezmoi.rebuild_cmd }} switch --flake {{ .chezmoi.sys_fla_location }}'
-alias hmedit='nvim {{ .chezmoi.hm_location }}'
-alias sysedit='nvim {{ .chezmoi.sys_location }}'
+alias sysup='{{ .rebuild_cmd }} switch --flake {{ .sys_fla_location }}'
+alias hmedit='nvim {{ .hm_location }}'
+alias sysedit='nvim {{ .sys_location }}'
 alias mamba='micromamba'
 alias conda='micromamba'
 # Functions -------------------------------------------------------------------

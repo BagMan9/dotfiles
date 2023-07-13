@@ -1,11 +1,9 @@
 # Aliases ---------------------------------------------------------------------
-alias vim='nvim'
-alias vi='nvim'
 alias bwsesh='export BW_SESSION=$(bw unlock --raw)'
 alias chezup='chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update'
-alias darup='darwin-rebuild switch --flake ~/.config/darwin/'
-alias hmedit='nvim ~/.config/darwin/home.nix'
-alias daredit='nvim ~/.config/darwin/flake.nix'
+alias sysup='{{ .chezmoi.rebuild-cmd }} switch --flake {{ .chezmoi.sys-fla-location }}'
+alias hmedit='nvim {{ .chezmoi.hm-location }}'
+alias sysedit='nvim {{ .chezmoi.sys-location }}'
 alias mamba='micromamba'
 alias conda='micromamba'
 # Functions -------------------------------------------------------------------

@@ -4,6 +4,8 @@ alias vi='nvim'
 alias bwsesh='export BW_SESSION=$(bw unlock --raw)'
 alias chezup='chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update'
 alias darup='darwin-rebuild switch --flake ~/.config/darwin/'
+alias hmedit='nvim ~/.config/darwin/home.nix'
+alias daredit='nvim ~/.config/darwin/flake.nix'
 # Functions -------------------------------------------------------------------
 function addsecret () {
   local prevSession=0

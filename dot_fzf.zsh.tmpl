@@ -8,9 +8,10 @@ fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "$HOME/.nix-profile/share/fzf/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "$HOME/.nix-hm-profile/home-path/share/fzf/completion.zsh" 2> /dev/null
+
 
 # Key bindings
 # ------------
-source "$HOME/.nix-profile/share/fzf/key-bindings.zsh"
+source "$HOME/.nix-hm-profile/home-path/share/fzf/key-bindings.zsh"
 {{- end }}

@@ -19,7 +19,7 @@ function addsecret () {
   then
     bw lock
   fi
-  echo "Echo the following into the template: {{ (bitwarden \"item\" \"$2\").notes | b64dec}"
+  echo "Echo the following into the template: \{\{ (bitwarden \"item\" \"$2\").notes | b64dec\}\}"
 
 }
 

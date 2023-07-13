@@ -6,6 +6,8 @@ alias chezup='chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update'
 alias darup='darwin-rebuild switch --flake ~/.config/darwin/'
 alias hmedit='nvim ~/.config/darwin/home.nix'
 alias daredit='nvim ~/.config/darwin/flake.nix'
+alias mamba='micromamba'
+alias conda='micromamba'
 # Functions -------------------------------------------------------------------
 function addsecret () {
   local prevSession=0

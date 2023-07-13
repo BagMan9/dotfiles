@@ -80,12 +80,13 @@ if [ -f "/Users/isaacgrannis/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 # Nix
-# if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-#     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-# fi
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
 # End Nix
-# path+=("/nix/var/nix/profiles/default/bin/")
-# path+=("$HOME/.nix-profile/bin/")
-# path+=("/run/current-system/sw/bin/")
+path+=("/nix/var/nix/profiles/default/bin/")
+path+=("$HOME/.nix-profile/bin/")
+path+=("/run/current-system/sw/bin/")
+path=("$HOME/.nix-hm-profile/home-path/bin" $path)
 {{- end}}
 

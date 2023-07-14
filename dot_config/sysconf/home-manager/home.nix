@@ -21,6 +21,7 @@
     pkgs.pipx
     pkgs.micromamba
     pkgs.zsh
+    pkgs.zsh-fzf-tab
   ];
   # Package configuration
   programs.fzf = {

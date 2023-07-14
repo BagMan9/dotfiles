@@ -22,6 +22,7 @@
     pkgs.micromamba
     pkgs.zsh
     pkgs.zsh-fzf-tab
+    pkgs.oh-my-zsh
   ];
   # Package configuration
   programs.fzf = {
@@ -36,6 +37,16 @@
       vimAlias = true;
       vimdiffAlias = true;
   };
+  
+  programs.zsh = {
+      oh-my-zsh = {
+          enable = true;
+          plugins = [ "fzf-tab" ];
+      };
+ }
+    }
+
+
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

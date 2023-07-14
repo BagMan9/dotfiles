@@ -40,7 +40,7 @@
         pointer = "#fdf6e3";
         marker = "#fdf6e3";
         spinner = "#b58900";
-      }
+      };
   };
 
   programs.neovim = {

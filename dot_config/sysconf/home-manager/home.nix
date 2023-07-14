@@ -1,12 +1,21 @@
 { config, pkgs, ... }:
-
+let
+  addSymlink = pkg: pkg.overrideAttrs (oldAttrs: rec {
+    postInstall = ''
+      ${oldAttrs.postInstall or ""}
+      mkdir -p $out/zsh-prezto/contrib/
+      ln -s $out $out/zsh-prezto/contrib/
+    '';
+  });
+in
 {
   home.username = "isaacgrannis";
-  home.profileDirectory = "/Users/isaacgrannis";
+  # Commented out the below for now, zsh seems to mess with it in some capacity and eliminating it did not break anything else
+  #home.profileDirectory = "/Users/isaacgrannis";
 
   home.stateVersion = "23.05";
 
-  home.packages = [
+  home.packages = with pkgs; [
     pkgs.chezmoi
     pkgs.neovim
     pkgs.git
@@ -20,7 +29,8 @@
     pkgs.pipx
     pkgs.micromamba
     pkgs.zsh
-    pkgs.oh-my-zsh
+    pkgs.zsh-prezto
+    (addSymlink pkgs.zsh-fzf-tab)
   ];
   # Package configuration
   programs.fzf = {
@@ -49,13 +59,48 @@
       vimdiffAlias = true;
   };
   
-  #programs.zsh = {
-  #    oh-my-zsh = {
-  #        enable = true;
-  #        plugins = [ "fzf-tab" ];
-  #    };
-  #    enable = true;
-  #};
+  programs.zsh = {
+      enable = true;
+      dotDir = ".config/zsh";
+
+      initExtraFirst = ''
+          if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+          fi
+      '';
+
+      initExtra = ''
+          [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      '' + (import ./shell_conf/functions.nix {a=0;});
+
+      shellAliases = (import ./shell_conf/aliases.nix {a=0;});
+
+      prezto = {
+          enable = true;
+          editor = {
+              dotExpansion = true;
+              keymap = "vi";
+          };
+          pmodules = [
+              "syntax-highlighting"
+              "git"
+              "fzf-tab"
+              "prompt"
+          ];
+          syntaxHighlighting = {
+              highlighters = [
+                  "main"
+                  "brackets"
+                  "pattern"
+                  "line"
+                  "cursor"
+                  "root"
+              ];
+          };
+          prompt.theme = "powerlevel10k";
+          tmux.autoStartLocal = true;
+        };
+  };
     
 
 

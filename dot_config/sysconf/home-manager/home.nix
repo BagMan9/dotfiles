@@ -129,6 +129,7 @@ in
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR="nvim";
+    VISUAL="nvim";
   };
 
   # Let Home Manager install and manage itself.

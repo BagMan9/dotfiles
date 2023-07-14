@@ -43,8 +43,9 @@
           enable = true;
           plugins = [ "fzf-tab" ];
       };
- }
-    }
+      enable = true;
+  };
+    
 
 
   home.file = {

@@ -12,7 +12,6 @@
     pkgs.git
     pkgs.ripgrep
     pkgs.fd
-    pkgs.lazygit
     pkgs.fzf
     pkgs.tmux
     pkgs.bitwarden-cli
@@ -21,7 +20,6 @@
     pkgs.pipx
     pkgs.micromamba
     pkgs.zsh
-    pkgs.zsh-fzf-tab
     pkgs.oh-my-zsh
   ];
   # Package configuration
@@ -30,6 +28,19 @@
     enableZshIntegration = true;
     enableBashIntegration = false;
     enableFishIntegration = false;
+    colors = {
+        fg = "-1";
+        bg = "-1";
+        hl = "#268bd2";
+        "fg+" = "#eee8d5";
+        "bg+" = "#073642";
+        "hl+" = "#268bd2";
+        info = "#b58900";
+        prompt = "#b58900";
+        pointer = "#fdf6e3";
+        marker = "#fdf6e3";
+        spinner = "#b58900";
+      }
   };
 
   programs.neovim = {

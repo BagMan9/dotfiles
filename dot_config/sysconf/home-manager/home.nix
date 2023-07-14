@@ -38,13 +38,13 @@
       vimdiffAlias = true;
   };
   
-  programs.zsh = {
-      oh-my-zsh = {
-          enable = true;
-          plugins = [ "fzf-tab" ];
-      };
-      enable = true;
-  };
+  #programs.zsh = {
+  #    oh-my-zsh = {
+  #        enable = true;
+  #        plugins = [ "fzf-tab" ];
+  #    };
+  #    enable = true;
+  #};
     
 
 

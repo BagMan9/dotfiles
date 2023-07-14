@@ -31,15 +31,15 @@
     colors = {
         fg = "-1";
         bg = "-1";
-        hl = "#268bd2";
-        "fg+" = "#eee8d5";
-        "bg+" = "#073642";
-        "hl+" = "#268bd2";
-        info = "#b58900";
-        prompt = "#b58900";
-        pointer = "#fdf6e3";
-        marker = "#fdf6e3";
-        spinner = "#b58900";
+        hl = "33";
+        "fg+" = "254";
+        "bg+" = "235";
+        "hl+" = "33";
+        info = "136";
+        prompt = "136";
+        pointer = "230";
+        marker = "230";
+        spinner = "136";
       };
   };
 

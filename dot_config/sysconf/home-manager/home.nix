@@ -59,8 +59,8 @@ in
       userName = "Isaac Grannis";
       signing = {
           signByDefault = true;
-          key = "9827C3A7F8C560A5"
-        }
+          key = "9827C3A7F8C560A5";
+        };
       delta = {
           enable = true;
       };

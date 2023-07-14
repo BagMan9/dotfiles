@@ -20,6 +20,7 @@
     pkgs.python311Packages.pip
     pkgs.pipx
     pkgs.micromamba
+    pkgs.zsh
   ];
   # Package configuration
   programs.fzf = {

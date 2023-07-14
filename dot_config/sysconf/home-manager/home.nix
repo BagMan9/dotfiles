@@ -31,6 +31,7 @@ in
     pkgs.zsh
     pkgs.zsh-prezto
     (addSymlink pkgs.zsh-fzf-tab)
+    pkgs.delta
   ];
   # Package configuration
   programs.fzf = {
@@ -52,7 +53,18 @@ in
         spinner = "136";
       };
   };
-
+  programs.git = {
+      enable = true;
+      userEmail = "115715725+BagMan9@users.noreply.github.com";
+      userName = "Isaac Grannis";
+      signing = {
+          signByDefault = true;
+          key = "9827C3A7F8C560A5"
+        }
+      delta = {
+          enable = true;
+      };
+  };
   programs.neovim = {
       defaultEditor = true;
       vimAlias = true;

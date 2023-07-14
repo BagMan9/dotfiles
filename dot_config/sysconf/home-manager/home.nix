@@ -20,9 +20,20 @@
     pkgs.python311Packages.pip
     pkgs.pipx
     pkgs.micromamba
-    pkgs.poetry
   ];
+  # Package configuration
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = false;
+    enableFishIntegration = false;
+  };
 
+  programs.neovim = {
+      defaultEditor = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+  };
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -47,7 +58,6 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.

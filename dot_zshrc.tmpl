@@ -26,9 +26,9 @@ ENABLE_CORRECTION="true" # Command Auto Correction
 COMPLETION_WAITING_DOTS="true" # Red Waiting Dots 
 ZSH_CUSTOM=~/.zshplugs #ZSH Custom Plugin Dir
 {{- if eq .chezmoi.os "darwin" }}
-plugins=(git fzf-tab poetry)
+plugins=(git fzf-tab)
 {{- else }}
-plugins=(git fzf-tab poetry)
+plugins=(git fzf-tab)
 {{- end }}
 
 source $ZSH/oh-my-zsh.sh

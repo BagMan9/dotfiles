@@ -61,7 +61,7 @@ in
       clock24 = true;
       keyMode = "vi";
       mouse = true;
-      escapeTime = 10;
+      escapeTime = 500;
       sensibleOnTop = true;
       newSession = true;
       prefix = "C-Space";

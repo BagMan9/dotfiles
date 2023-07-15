@@ -3,7 +3,6 @@
   homebrew = {
       enable = true;
       casks = [
-          "calibre"
           "bitwarden"
           "cardhop"
           "coteditor"

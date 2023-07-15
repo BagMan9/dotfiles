@@ -119,6 +119,7 @@ in
               "syntax-highlighting"
               "editor"
               "environment"
+              "tmux"
               "history"
               "autosuggestions"
               "directory"

@@ -61,7 +61,7 @@ in
       clock24 = true;
       keyMode = "vi";
       mouse = true;
-      escapeTime = 500;
+      escapeTime = 10;
       sensibleOnTop = true;
       newSession = true;
       prefix = "C-Space";
@@ -121,7 +121,6 @@ in
           pmodules = [
               "syntax-highlighting"
               "editor"
-              "tmux"
               "environment"
               "history"
               "autosuggestions"

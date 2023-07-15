@@ -58,11 +58,7 @@ let
           done
           chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update
           darwin-rebuild switch --flake ~/.config/sysconf/
-          source $ZDOTDIR/.zshrc
-          if [ "$prevSession" -eq "1" ]
-          then
-            bw lock
-          fi
+
         }
 
     '';

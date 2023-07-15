@@ -73,7 +73,7 @@ in
       extraConfig = ''
         bind v split-window -v -c "#{pane_current_path}"
         bind h split-window -h -c "#{pane_current_path}"
-        set-option -sa terminal-features ',xterm-256color:RGB'
+        set-option -ga terminal-features ',xterm-256color:Tc'
       '';
     };
   programs.git = {

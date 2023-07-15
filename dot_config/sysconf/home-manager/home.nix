@@ -118,6 +118,7 @@ in
           pmodules = [
               "syntax-highlighting"
               "editor"
+              "tmux"
               "environment"
               "history"
               "autosuggestions"

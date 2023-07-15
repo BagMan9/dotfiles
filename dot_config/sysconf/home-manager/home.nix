@@ -34,7 +34,6 @@ in
     pkgs.delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     pkgs.gimp
-    pkgs.calibre
   ];
   # Fonts
   fonts.fontconfig.enable = true;

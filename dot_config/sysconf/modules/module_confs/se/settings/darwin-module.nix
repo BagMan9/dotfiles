@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   # Light/Dark mode auto switch
-  system.defaults.AppleInterfaceStyleSwitchesAutomatically = true;
+  system.defaults.NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
 
   # Dock stuff
   system.defaults.dock.autohide = true;

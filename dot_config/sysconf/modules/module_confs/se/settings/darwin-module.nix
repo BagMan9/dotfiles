@@ -38,8 +38,8 @@
 
   # Fonts
   fonts.fontDir.enable = true;
-  fonts.fonts = [
-    pkgs.nerdfonts
+  fonts.fonts = with pkgs [
+    (nerdfonts.override { fonts = [ "Hurmit" ]; })
   ];
 
 

@@ -36,10 +36,4 @@
   system.defaults.menuExtraClock.ShowDayOfMonth = false;
   system.defaults.menuExtraClock.ShowDayOfWeek = false;
 
-  # Fonts
-  fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hermit" ]; })
-  ];
-
-}
+ }

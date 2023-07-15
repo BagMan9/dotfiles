@@ -32,8 +32,15 @@ in
     pkgs.zsh-prezto
     (addSymlink pkgs.zsh-fzf-tab)
     pkgs.delta
+    (nerdfonts.override { fonts = [ "Hermit" ]; })
   ];
+  # Fonts
+  fonts.fontconfig.enable = true;
+
   # Package configuration
+  # ---------------------
+
+  # FZF
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -55,6 +62,7 @@ in
       };
   };
 
+  # Tmux
   programs.tmux = {
       enable = true;
       baseIndex = 1;
@@ -77,6 +85,8 @@ in
         set-option -sa terminal-features ',xterm-256color:RGB'
       '';
     };
+  
+  # Git
   programs.git = {
       enable = true;
       userEmail = "115715725+BagMan9@users.noreply.github.com";
@@ -89,12 +99,13 @@ in
           enable = true;
       };
   };
+  # Neovim
   programs.neovim = {
       defaultEditor = true;
       vimAlias = true;
       vimdiffAlias = true;
   };
-  
+  # Zsh
   programs.zsh = {
       enable = true;
       dotDir = ".config/zsh";
@@ -146,7 +157,6 @@ in
           tmux.autoStartLocal = true;
         };
   };
-    
 
 
   home.file = {

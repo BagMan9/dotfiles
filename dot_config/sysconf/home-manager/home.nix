@@ -60,7 +60,7 @@ in
       baseIndex = 1;
       clock24 = true;
       keyMode = "vi";
-      mouse = "on";
+      mouse = true;
       sensibleOnTop = true;
       newSession = true;
       prefix = "C-Space";

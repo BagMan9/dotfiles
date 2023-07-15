@@ -51,7 +51,7 @@ let
     fullUpgrade= ''
       function fullUpgrade () {
           local prevSession=0
-          while [$BW_SESSION = ""]
+          while [ "$BW_SESSION" = "" ]
           do
             export BW_SESSION=$(bw unlock --raw)
             local prevSession=1

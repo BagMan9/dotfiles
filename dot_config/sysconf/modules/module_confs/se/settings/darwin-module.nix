@@ -4,24 +4,27 @@
   system.defaults.NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
 
   # Dock stuff
-  system.defaults.dock.autohide = true;
-  system.defaults.dock.autohide-delay = 0.0;
-  system.defaults.dock.autohide-time-modifier = 0.0;
-  system.defaults.dock.tilesize =  50;
-  system.defaults.dock.show-process-indicators = true;
-  system.defaults.dock.launchanim = false;
-  system.defaults.dock.mineffect = "scale";
-  system.defaults.dock.minimize-to-application = true;
+  system.defaults.dock = {
+    autohide = true;
+    autohide-delay = 0.0;
+    autohide-time-modifier = 0.0;
+    tilesize = 50;
+    show-process-indicators = true;
+    launchanim = false;
+    mineffect = "scale";
+    minimize-to-application = true;
+  };
 
   # Finder Stuff
-  system.defaults.finder.AppleShowAllExtensions = true;
-  system.defaults.finder.FXEnableExtensionChangeWarning = false;
-  system.defaults.finder.FXPreferredViewStyle = "Nlsv";
-  system.defaults.finder.ShowPathbar = true;
-  system.defaults.finder.ShowStatusBar = true;
-  system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
+  system.defaults.finder = {
+    FXEnableExtensionChangeWarning = false;
+    FXPreferredViewStyle = "Nlsv";
+    ShowPathbar = true;
+    ShowStatusBar = true;
+    AppleShowAllExtensions = true;
+  };
 
-  # Misc
+  system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
 
   # Login Window
   system.defaults.loginwindow.DisableConsoleAccess = true;
@@ -33,7 +36,11 @@
   system.defaults.menuExtraClock.ShowDayOfMonth = false;
   system.defaults.menuExtraClock.ShowDayOfWeek = false;
 
-
+  # Fonts
+  fonts.fontDir.enable = true;
+  fonts.fonts = [
+    pkgs.nerdfonts
+  ]
 
 
 }

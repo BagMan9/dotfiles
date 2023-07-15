@@ -74,7 +74,7 @@ in
         bind v split-window -v -c "#{pane_current_path}"
         bind h split-window -h -c "#{pane_current_path}"
       '';
-    }
+    };
   programs.git = {
       enable = true;
       userEmail = "115715725+BagMan9@users.noreply.github.com";

@@ -50,13 +50,19 @@ let
     '';
     fullUpgrade= ''
       function fullUpgrade () {
+          local prevSession=0
           while [$BW_SESSION -eq ""]
           do
             export BW_SESSION=$(bw unlock --raw)
+            local prevSession=1
           done
           chezup
           sysup
           source $ZDOTDIR/.zshrc
+          if [$prevSession -eq 1]
+          then
+            bw lock
+          fi
         }
 
     '';

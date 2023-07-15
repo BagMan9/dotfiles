@@ -2,6 +2,9 @@
 {
   homebrew = {
       enable = true;
+      brews = [
+        "mas"
+      ];
       casks = [
           "cardhop"
           "coteditor"

@@ -5,8 +5,8 @@
 
   # Dock stuff
   system.defaults.dock.autohide = true;
-  system.defaults.dock.autohideDelay = 0;
-  system.defaults.dock.autohideTimeModifier = 0;
+  system.defaults.dock.autohide-delay = 0;
+  system.defaults.dock.autohide-time-modifier = 0;
   system.defaults.dock.tilesize =  50;
   system.defaults.dock.show-process-indicators = true;
   system.defaults.dock.launchanim = false;

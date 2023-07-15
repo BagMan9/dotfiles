@@ -117,7 +117,6 @@ in
           };
           pmodules = [
               "syntax-highlighting"
-              "terminal"
               "editor"
               "environment"
               "history"

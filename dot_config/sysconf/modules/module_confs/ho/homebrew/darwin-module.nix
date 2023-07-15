@@ -3,15 +3,19 @@
   homebrew = {
       enable = true;
       casks = [
-          "bitwarden"
           "cardhop"
           "coteditor"
           "disk-inventory-x"
           "kindle-previewer"
           "qBittorrent"
       ];
+      global = {
+          autoUpdate = false;
+      };
       onActivation = {
           cleanup = "zap";
-        };
+          autoUpdate = false;
+          upgrade = true;
+      };
   };
 }

@@ -39,6 +39,7 @@ in
     enableZshIntegration = true;
     enableBashIntegration = false;
     enableFishIntegration = false;
+    tmux.enableShellIntegration = true;
     colors = {
         fg = "-1";
         bg = "-1";

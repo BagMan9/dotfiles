@@ -5,5 +5,5 @@
     sysup="darwin-rebuild switch --flake ~/.config/sysconf/";
     hmedit="chezmoi edit ~/.config/sysconf/home-manager";
     sysedit="chezmoi edit ~/.config/sysconf";
-    fullup="chezup && sysup && source ~/.config/zsh/.zshrc";
+    fullup="fullUpgrade";
 }

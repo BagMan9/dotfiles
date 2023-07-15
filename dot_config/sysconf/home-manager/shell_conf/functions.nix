@@ -48,6 +48,18 @@ let
       }
 
     '';
+    fullUpgrade= ''
+      function fullUpgrade () {
+          while [$BW_SESSION -eq ""]
+          do
+            export BW_SESSION=$(bw unlock --raw)
+          done
+          chezup
+          sysup
+          source $ZDOTDIR/.zshrc
+        }
+
+    '';
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);
 in

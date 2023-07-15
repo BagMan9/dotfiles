@@ -12,7 +12,7 @@
           "qBittorrent"
       ];
       onActivation = {
-          cleanup "zap";
+          cleanup = "zap";
         };
   };
 }

@@ -117,6 +117,14 @@ in
           };
           pmodules = [
               "syntax-highlighting"
+              "terminal"
+              "editor"
+              "environment"
+              "history"
+              "directory"
+              "spectrum"
+              "utility"
+              "completion"
               "git"
               "fzf-tab"
               "prompt"

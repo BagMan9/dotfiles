@@ -104,7 +104,7 @@ in
       '';
 
       initExtra = ''
-          [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+          [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
       '' + (import ./shell_conf/functions.nix {a=0;});
 
       shellAliases = (import ./shell_conf/aliases.nix {a=0;});

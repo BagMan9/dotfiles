@@ -54,6 +54,27 @@ in
         spinner = "136";
       };
   };
+
+  programs.tmux = {
+      enable = true;
+      baseIndex = 1;
+      clock24 = true;
+      keyMode = "vi";
+      mouse = "on";
+      sensibleOnTop = true;
+      newSession = true;
+      prefix = "C-Space";
+      terminal = "screen-256color";
+      plugins = with pkgs; [
+          tmuxPlugins.vim-tmux-navigator
+          tmuxPlugins.catppuccin
+          tmuxPlugins.yank
+      ];
+      extraConfig = ''
+        bind v split-window -v -c "#{pane_current_path}"
+        bind h split-window -h -c "#{pane_current_path}"
+      '';
+    }
   programs.git = {
       enable = true;
       userEmail = "115715725+BagMan9@users.noreply.github.com";

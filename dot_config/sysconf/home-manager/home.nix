@@ -121,6 +121,7 @@ in
               "editor"
               "environment"
               "history"
+              "autosuggestions"
               "directory"
               "spectrum"
               "utility"

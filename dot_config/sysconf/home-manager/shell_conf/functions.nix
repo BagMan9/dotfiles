@@ -59,7 +59,7 @@ let
           chezup
           sysup
           source $ZDOTDIR/.zshrc
-          if [$prevSession -eq 1]
+          if [ "$prevSession" -eq 1]
           then
             bw lock
           fi

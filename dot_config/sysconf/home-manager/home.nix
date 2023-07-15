@@ -120,6 +120,9 @@ in
       initExtra = ''
           [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
       '' + (import ./shell_conf/functions.nix {a=0;});
+      profileExtra = ''
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+      '';
 
       shellAliases = (import ./shell_conf/aliases.nix {a=0;});
 

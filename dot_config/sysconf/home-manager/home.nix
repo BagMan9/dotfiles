@@ -64,7 +64,7 @@ in
       sensibleOnTop = true;
       newSession = true;
       prefix = "C-Space";
-      terminal = "screen-256color";
+      terminal = "xterm-256color";
       plugins = with pkgs; [
           tmuxPlugins.vim-tmux-navigator
           tmuxPlugins.catppuccin

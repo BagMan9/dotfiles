@@ -70,7 +70,7 @@ in
     };
   
   # Git
-  programs.git = (import ./progam_conf/git.nix {a=0;})
+  programs.git = (import ./progam_conf/git.nix {a=0;});
   # Neovim
   programs.neovim = {
       defaultEditor = true;
@@ -78,7 +78,7 @@ in
       vimdiffAlias = true;
   };
   # Zsh
-  programs.zsh = (import ./shell_conf/zsh.nix {a=0;})
+  programs.zsh = (import ./shell_conf/zsh.nix {a=0;});
 
 
   home.file = {

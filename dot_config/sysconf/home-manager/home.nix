@@ -22,6 +22,7 @@ in
     pkgs.ripgrep
     pkgs.fd
     pkgs.fzf
+    pkgs.lazygit
     pkgs.tmux
     pkgs.bitwarden-cli
     pkgs.python311

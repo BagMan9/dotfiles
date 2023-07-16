@@ -20,5 +20,4 @@
         bind h split-window -h -c "#{pane_current_path}"
         set-option -sa terminal-features ',xterm-256color:RGB'
       '';
-    };
 }

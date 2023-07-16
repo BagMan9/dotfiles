@@ -46,28 +46,7 @@ in
   programs.fzf = (import ./progam_conf/fzf.nix {a=0;});
 
   # Tmux
-  programs.tmux = {
-      enable = true;
-      baseIndex = 1;
-      clock24 = true;
-      keyMode = "vi";
-      mouse = true;
-      escapeTime = 10;
-      sensibleOnTop = true;
-      newSession = true;
-      prefix = "C-Space";
-      terminal = "screen-256color";
-      plugins = with pkgs; [
-          tmuxPlugins.vim-tmux-navigator
-          tmuxPlugins.catppuccin
-          tmuxPlugins.yank
-      ];
-      extraConfig = ''
-        bind v split-window -v -c "#{pane_current_path}"
-        bind h split-window -h -c "#{pane_current_path}"
-        set-option -sa terminal-features ',xterm-256color:RGB'
-      '';
-    };
+  programs.tmux = (import ./progam_conf/tmux.nix {a=0;});
   
   # Git
   programs.git = (import ./progam_conf/git.nix {a=0;});
@@ -77,6 +56,7 @@ in
       vimAlias = true;
       vimdiffAlias = true;
   };
+
   # Zsh
   programs.zsh = (import ./shell_conf/zsh.nix {a=0;});
 
@@ -86,12 +66,6 @@ in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   home.sessionVariables = {

@@ -43,26 +43,7 @@ in
   # ---------------------
 
   # FZF
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-    enableBashIntegration = false;
-    enableFishIntegration = false;
-    tmux.enableShellIntegration = true;
-    colors = {
-        fg = "-1";
-        bg = "-1";
-        hl = "33";
-        "fg+" = "254";
-        "bg+" = "235";
-        "hl+" = "33";
-        info = "136";
-        prompt = "136";
-        pointer = "230";
-        marker = "230";
-        spinner = "136";
-      };
-  };
+  programs.fzf = (import ./progam_conf/fzf.nix {a=0;});
 
   # Tmux
   programs.tmux = {
@@ -89,18 +70,7 @@ in
     };
   
   # Git
-  programs.git = {
-      enable = true;
-      userEmail = "115715725+BagMan9@users.noreply.github.com";
-      userName = "Isaac Grannis";
-      signing = {
-          signByDefault = true;
-          key = "9827C3A7F8C560A5";
-        };
-      delta = {
-          enable = true;
-      };
-  };
+  programs.git = (import ./progam_conf/git.nix {a=0;})
   # Neovim
   programs.neovim = {
       defaultEditor = true;
@@ -108,60 +78,7 @@ in
       vimdiffAlias = true;
   };
   # Zsh
-  programs.zsh = {
-      enable = true;
-      dotDir = ".config/zsh";
-
-      initExtraFirst = ''
-          if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-          fi
-          ZSH_TMUX_AUTOSTART=true
-      '';
-
-      initExtra = ''
-          [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
-      '' + (import ./shell_conf/functions.nix {a=0;});
-      profileExtra = ''
-          eval "$(/opt/homebrew/bin/brew shellenv)"
-      '';
-
-      shellAliases = (import ./shell_conf/aliases.nix {a=0;});
-
-      prezto = {
-          enable = true;
-          editor = {
-              dotExpansion = true;
-              keymap = "vi";
-          };
-          pmodules = [
-              "syntax-highlighting"
-              "editor"
-              "environment"
-              "history"
-              "autosuggestions"
-              "directory"
-              "spectrum"
-              "utility"
-              "completion"
-              "git"
-              "fzf-tab"
-              "prompt"
-          ];
-          syntaxHighlighting = {
-              highlighters = [
-                  "main"
-                  "brackets"
-                  "pattern"
-                  "line"
-                  "cursor"
-                  "root"
-              ];
-          };
-          prompt.theme = "powerlevel10k";
-          tmux.autoStartLocal = true;
-        };
-  };
+  programs.zsh = (import ./shell_conf/zsh.nix {a=0;})
 
 
   home.file = {
@@ -177,16 +94,6 @@ in
     # '';
   };
 
-  # You can also manage environment variables but you will have to manually
-  # source
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/isaacgrannis/etc/profile.d/hm-session-vars.sh
-  #
-  # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR="nvim";
     VISUAL="nvim";

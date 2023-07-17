@@ -11,6 +11,7 @@
           "disk-inventory-x"
           "kindle-previewer"
           "qBittorrent"
+          "thunderbird"
       ];
       global = {
           autoUpdate = false;

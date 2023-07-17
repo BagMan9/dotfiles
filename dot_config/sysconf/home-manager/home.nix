@@ -35,7 +35,6 @@ in
     pkgs.delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     pkgs.gimp
-    pkgs.thunderbirdPackages.thunderbird-115
   ];
   # Fonts
   fonts.fontconfig.enable = true;

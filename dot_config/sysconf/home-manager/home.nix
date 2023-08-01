@@ -35,6 +35,7 @@ in
     pkgs.delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     pkgs.gimp
+    pkgs.docker
   ];
   # Fonts
   fonts.fontconfig.enable = true;

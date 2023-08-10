@@ -27,6 +27,7 @@ in
     pkgs.bitwarden-cli
     pkgs.python311
     pkgs.python311Packages.pip
+    pkgs.python311Packages.tkinter
     pkgs.pipx
     pkgs.micromamba
     pkgs.zsh

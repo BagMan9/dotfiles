@@ -4,6 +4,7 @@
       enable = true;
       brews = [
         "mas"
+        "python-tk"
       ];
       casks = [
           "cardhop"

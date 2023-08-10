@@ -23,7 +23,7 @@ let
       function pyenv-c () {
         if [ "$1" = "new" ]
         then
-          cp ~/Utils/environment.yml ./
+          cp ~/Utils/environment.yml .
           nvim environment.yml
           conda env create -f environment.yml
           conda activate $(cat environment.yml | grep name | awk '{print $2}')

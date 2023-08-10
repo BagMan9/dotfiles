@@ -36,6 +36,7 @@ in
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     pkgs.gimp
     pkgs.docker
+    pkgs.poetry
   ];
   # Fonts
   fonts.fontconfig.enable = true;

@@ -10,8 +10,6 @@ return {
       servers = {
         -- Python
         jedi_language_server = {},
-        -- C/C++
-        clangd = {},
         -- HTML
         html = {},
         -- TS/JS

@@ -6,15 +6,18 @@ return {
       diagnostics = {
         virtual_text = false,
       },
-      capabilities = {
-        offsetEncoding = { "utf-16" },
-      },
       ---@type lspconfig.options
       servers = {
         -- Python
         jedi_language_server = {},
         -- C/C++
-        clangd = {},
+        clangd = {
+          setup = {
+            capabilities = {
+              offsetEncoding = { "utf-16" },
+            },
+          },
+        },
         -- HTML
         html = {},
         -- TS/JS

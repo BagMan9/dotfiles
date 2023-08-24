@@ -75,9 +75,6 @@ return {
         require("typescript").setup({ server = opts })
         return true
       end,
-      clangd = function(_, opts)
-
-      end
     },
   },
   {

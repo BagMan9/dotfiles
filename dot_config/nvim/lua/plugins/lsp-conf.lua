@@ -11,7 +11,7 @@ return {
         -- Python
         jedi_language_server = {},
         -- C/C++
-        ccls = {},
+        clangd = {},
         -- HTML
         html = {},
         -- TS/JS
@@ -85,7 +85,8 @@ return {
           nls.builtins.formatting.htmlbeautifier,
           nls.builtins.formatting.fixjson,
           nls.builtins.formatting.prettierd,
-          require("typescript.extensions.null-ls.code-actions")
+          require("typescript.extensions.null-ls.code-actions"),
+          nls.builtins.formatting.clang_format,
 
         },
       }

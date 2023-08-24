@@ -86,7 +86,6 @@ return {
           nls.builtins.formatting.fixjson,
           nls.builtins.formatting.prettierd,
           require("typescript.extensions.null-ls.code-actions"),
-          nls.builtins.formatting.clang_format,
 
         },
       }

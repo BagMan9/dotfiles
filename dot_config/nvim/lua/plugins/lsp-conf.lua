@@ -6,10 +6,15 @@ return {
       diagnostics = {
         virtual_text = false,
       },
+      capabilities = {
+        offsetEncoding = { "utf-16" },
+      },
       ---@type lspconfig.options
       servers = {
         -- Python
         jedi_language_server = {},
+        -- C/C++
+        clangd = {},
         -- HTML
         html = {},
         -- TS/JS
@@ -67,6 +72,9 @@ return {
         require("typescript").setup({ server = opts })
         return true
       end,
+      clangd = function(_, opts)
+
+      end
     },
   },
   {
@@ -113,5 +121,6 @@ return {
     "b0o/SchemaStore.nvim",
     version = false, -- last release is way too old
   },
-  { "jose-elias-alvarez/typescript.nvim" }
+  { "jose-elias-alvarez/typescript.nvim" },
+
 }

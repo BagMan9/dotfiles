@@ -14,7 +14,6 @@ in
   #home.profileDirectory = "/Users/isaacgrannis";
 
   home.stateVersion = "23.05";
-
   home.packages = with pkgs; [
     pkgs.chezmoi
     pkgs.neovim
@@ -38,7 +37,9 @@ in
     pkgs.gimp
     pkgs.docker
     pkgs.poetry
-  ];
+    pkgs.llvmPackages_16.libcxxClang
+    pkgs.clang-tools_16
+	];
   # Fonts
   fonts.fontconfig.enable = true;
 

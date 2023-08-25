@@ -6,7 +6,7 @@ window:
     columns: 190
     lines: 50
   
-  decorations: transparent
+  decorations: None
   
   opacity: 1.0
 

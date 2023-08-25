@@ -20,7 +20,7 @@
     {
     nixosConfigurations = {
 
-      "Isaac-CSC-PI" = nixpkgs.lib.nixosSystem {
+      Isaac-CSC-PI = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
 	      specialArgs = { inherit inputs outputs; };
 	      modules = [ 
@@ -31,7 +31,7 @@
     };
     darwinConfigurations = {
 
-      "Isaacs-MacBook-Pro" = darwin.lib.darwinSystem {
+      Isaacs-MacBook-Pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin"; 
         modules = [ 
             ./hosts/Isaacs-MacBook-Pro/default.nix

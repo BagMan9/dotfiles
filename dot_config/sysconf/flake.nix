@@ -23,14 +23,15 @@
       Isaac-CSC-PI = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
 	      specialArgs = { inherit inputs outputs; };
-	      modules = [ 
-            ./hosts/Isaac-Pi/default.nix
+	      modules = [
+            ./hosts/Isaac-CSC-PI/default.nix
 		        home-manager.nixosModules.home-manager
 		        ( import ./home-manager/hm_conf.nix { inherit home-manager; } )
 		        ] ++ plat_modules.nixos;
       };
     };
     darwinConfigurations = {
+
       Isaacs-MacBook-Pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin"; 
         modules = [ 

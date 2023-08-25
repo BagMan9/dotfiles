@@ -37,8 +37,6 @@ in
     pkgs.gimp
     pkgs.docker
     pkgs.poetry
-    pkgs.llvmPackages_16.libcxxClang
-    pkgs.clang-tools_16
 	];
   # Fonts
   fonts.fontconfig.enable = true;

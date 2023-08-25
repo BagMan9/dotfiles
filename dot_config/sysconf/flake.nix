@@ -33,8 +33,8 @@
     darwinConfigurations = {
 
       Isaacs-MacBook-Pro = darwin.lib.darwinSystem {
-        system = "aarch64-darwin"; 
-        modules = [ 
+        system = "aarch64-darwin";
+        modules = [
             ./hosts/Isaacs-MacBook-Pro/default.nix
 	          home-manager.darwinModules.home-manager
 	          ( import ./home-manager/hm_conf.nix { inherit home-manager; } )

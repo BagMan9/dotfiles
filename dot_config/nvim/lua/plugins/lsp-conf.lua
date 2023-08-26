@@ -88,10 +88,6 @@ return {
           nls.builtins.formatting.black.with({
             extra_args = { "--line-length", "79", "--preview" },
           }),
-          nls.builtins.formatting.htmlbeautifier,
-          nls.builtins.formatting.fixjson,
-          nls.builtins.formatting.prettierd,
-          require("typescript.extensions.null-ls.code-actions"),
 
         },
       }
@@ -109,11 +105,7 @@ return {
       ensure_installed = {
         "flake8",
         "black",
-        "htmlbeautifier",
         "jedi-language-server",
-        "typescript-language-server",
-        "json-lsp",
-        "html-lsp",
       },
     },
   },
@@ -121,6 +113,5 @@ return {
     "b0o/SchemaStore.nvim",
     version = false, -- last release is way too old
   },
-  { "jose-elias-alvarez/typescript.nvim" },
 
 }

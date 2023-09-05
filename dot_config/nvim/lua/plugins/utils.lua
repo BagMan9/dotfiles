@@ -3,14 +3,6 @@ return {
     "tpope/vim-fugitive",
   },
   {
-    "ellisonleao/glow.nvim",
-    config = true,
-    cmd = "Glow",
-    opts = {
-      style = "dark",
-    },
-  },
-  {
     "aserowy/tmux.nvim",
     config = function()
       require("tmux").setup()
@@ -49,7 +41,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "json", "json5", "jsonc", "typescript", "tsx" })
+        vim.list_extend(opts.ensure_installed, { "json", "json5", "jsonc", })
       end
     end,
   },

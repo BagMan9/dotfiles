@@ -73,10 +73,6 @@ return {
     },
   },
   {
-    "b0o/SchemaStore.nvim",
-    version = false, -- last release is way too old
-  },
-  {
     "folke/trouble.nvim",
     opts = { use_diagnostic_signs = true },
   },

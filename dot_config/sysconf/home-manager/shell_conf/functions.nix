@@ -20,30 +20,15 @@ let
 
     '';
     createDevEnv = ''
-      function pyenv-c () {
-        if [ "$1" = "new" ]
-        then
-          cp ~/Utils/environment.yml .
-          nvim environment.yml
-          conda env create -f environment.yml
-          conda activate $(cat environment.yml | grep name | awk '{print $2}')
-          poetry init
-          poetry install
-          conda-lock -k explicit --conda mamba
-        fi
-
-        if [ "$1" = "update" ]
-        then
-          conda-lock -k explicit --conda mamba
-          mamba update --file conda-osx-arm64.lock
-          poetry update
-        fi
-
-        if [ "$1" = "pre" ]
-        then
-          conda create --name $2 --file conda-osx-arm64.lock
-          conda activate $2
-          poetry install
+      function pdev () {
+        if [[ $1 == "init" ]] then
+          python -m venv $2/venv/
+          cd $2
+          source /venv/bin/activate
+        elif [[ $1 == "activate" ]] then 
+          source /venv/bin/activate
+        elif [[ $1 == "exit" ]] then
+          deactivate
         fi
       }
 

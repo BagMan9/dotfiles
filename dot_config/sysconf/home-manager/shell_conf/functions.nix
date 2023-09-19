@@ -62,6 +62,12 @@ let
         }
 
     '';
+
+    MakeAndCd = ''
+      function mkcd () {
+          mkdir -p $1 && cd $1
+        }
+    ''
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);
 in

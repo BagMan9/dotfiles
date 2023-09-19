@@ -24,9 +24,9 @@ let
         if [[ $1 == "init" ]] then
           python -m venv $2/venv/
           cd $2
-          source /venv/bin/activate
+          source venv/bin/activate
         elif [[ $1 == "activate" ]] then 
-          source /venv/bin/activate
+          source venv/bin/activate
         elif [[ $1 == "exit" ]] then
           deactivate
         fi

@@ -19,11 +19,13 @@ let
       }
 
     '';
-    createDevEnv = ''
+    createPythonDevEnv = ''
       function pdev () {
         if [[ $1 == "init" ]] then
+          mkdir -p $2
           python -m venv $2/venv/
           cd $2
+          git init
           source venv/bin/activate
         elif [[ $1 == "activate" ]] then 
           source venv/bin/activate

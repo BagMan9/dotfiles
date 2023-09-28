@@ -5,6 +5,7 @@
       brews = [
         "mas"
         "python-tk"
+        "sshfs"
       ];
       casks = [
           "cardhop"

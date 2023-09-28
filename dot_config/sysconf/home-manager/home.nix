@@ -37,6 +37,7 @@ in
     pkgs.gimp
     pkgs.docker
     pkgs.poetry
+    pkgs.cargo
 	];
   # Fonts
   fonts.fontconfig.enable = true;

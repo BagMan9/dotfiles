@@ -55,6 +55,17 @@ let
           mkdir -p $1 && cd $1
         }
     '';
+
+    PiDevelop = ''
+      function enterpi () {
+          sshfs -o allow_other rpi:/home/csc-student/ ~/mnt/pi-remote
+          cd ~/mnt/pi-remote/ && nvim .
+          tmux split-window -v "ssh rpi"
+        }
+    ''
+    PiUnDev = ''
+      function piexit
+    ''
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);
 in

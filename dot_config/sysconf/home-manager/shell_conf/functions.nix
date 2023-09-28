@@ -59,8 +59,9 @@ let
     PiDevelop = ''
       function enterpi () {
           sshfs -o allow_other rpi:/home/csc-student/ ~/mnt/pi-remote
-          cd ~/mnt/pi-remote/ && nvim .
+          cd ~/mnt/pi-remote/
           tmux split-window -v "ssh rpi"
+          nvim .
         }
     '';
     PiUnDev = ''

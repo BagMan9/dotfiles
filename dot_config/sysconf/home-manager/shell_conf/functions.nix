@@ -62,12 +62,12 @@ let
           cd ~/mnt/pi-remote/ && nvim .
           tmux split-window -v "ssh rpi"
         }
-    ''
+    '';
     PiUnDev = ''
       function piexit () {
           umount ~/mnt/pi-remote/
         }
-    ''
+    '';
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);
 in

@@ -64,7 +64,9 @@ let
         }
     ''
     PiUnDev = ''
-      function piexit
+      function piexit () {
+          umount ~/mnt/pi-remote/
+        }
     ''
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);

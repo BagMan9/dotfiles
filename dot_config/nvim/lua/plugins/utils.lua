@@ -18,7 +18,4 @@ return {
       require("octo").setup()
     end,
   },
-  {
-    "ARM9/arm-syntax-vim",
-  },
 }

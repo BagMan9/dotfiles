@@ -36,12 +36,11 @@ return {
             },
           },
         },
-
       },
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = function()
       local nls = require("null-ls")
       return {
@@ -51,7 +50,6 @@ return {
           nls.builtins.formatting.black.with({
             extra_args = { "--line-length", "79", "--preview" },
           }),
-
         },
       }
     end,
@@ -76,5 +74,4 @@ return {
     "folke/trouble.nvim",
     opts = { use_diagnostic_signs = true },
   },
-
 }

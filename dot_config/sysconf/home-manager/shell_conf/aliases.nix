@@ -7,5 +7,5 @@
     sysedit="chezmoi edit ~/.config/sysconf";
     nvedit="chezmoi edit ~/.config/nvim";
     fullup="fullUpgrade";
-    checksha="openssl sha256"
+    checksha="openssl sha256";
 }

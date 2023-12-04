@@ -11,6 +11,7 @@
   '';
 
   initExtra = ''
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
       [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
   '' + (import ./functions.nix {a=0;});
 
@@ -49,7 +50,6 @@
           "utility"
           "completion"
           "git"
-          "fzf-tab"
           "prompt"
       ];
       syntaxHighlighting = {

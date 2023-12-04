@@ -61,7 +61,7 @@ in
   };
 
   # Zsh
-  programs.zsh = (import ./shell_conf/zsh.nix {a=0;});
+  programs.zsh = (import ./shell_conf/zsh.nix {pkgs});
 
 
   home.file = {

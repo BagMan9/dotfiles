@@ -40,6 +40,7 @@ in
     pkgs.universal-ctags
     pkgs.zsh-fzf-tab
 	];
+
   # Fonts
   fonts.fontconfig.enable = true;
 

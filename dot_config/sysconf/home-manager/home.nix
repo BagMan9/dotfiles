@@ -38,6 +38,7 @@ in
     pkgs.docker
     pkgs.poetry
     pkgs.cargo
+    pkgs.universal-ctags
 	];
   # Fonts
   fonts.fontconfig.enable = true;

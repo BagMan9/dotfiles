@@ -22,7 +22,7 @@
 
   plugins = [
     {
-        name = "fzf-tab"
+        name = "fzf-tab";
         src = pkgs.fetchFromGitHub {
           owner = "Aloxaf";
           repo = "fzf-tab";

@@ -30,7 +30,7 @@
           hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
         };
       }
-  ]
+  ];
 
   prezto = {
       enable = true;

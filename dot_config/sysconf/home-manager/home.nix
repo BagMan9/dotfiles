@@ -31,7 +31,6 @@ in
     pkgs.micromamba
     pkgs.zsh
     pkgs.zsh-prezto
-    (addSymlink pkgs.zsh-fzf-tab)
     pkgs.delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     pkgs.gimp

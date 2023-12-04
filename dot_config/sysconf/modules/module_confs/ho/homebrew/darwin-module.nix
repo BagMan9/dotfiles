@@ -14,6 +14,7 @@
           "kindle-previewer"
           "qBittorrent"
           "thunderbird"
+          "middleclick"
       ];
       global = {
           autoUpdate = false;

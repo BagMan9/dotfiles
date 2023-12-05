@@ -31,7 +31,7 @@ in
     pkgs.fd
     pkgs.fzf
     pkgs.lazygit
-    tmux_oldv
+    pkgs.tmux
     pkgs.bitwarden-cli
     pkgs.python311
     pkgs.python311Packages.pip

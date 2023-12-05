@@ -9,7 +9,6 @@
           "coteditor"
           "disk-inventory-x"
           "kindle-previewer"
-          "qBittorrent"
           "middleclick"
       ];
       global = {

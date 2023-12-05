@@ -37,6 +37,7 @@ in
     pkgs.docker
     pkgs.poetry
     pkgs.universal-ctags
+    pkgs.deno
 	];
 
   # Fonts

@@ -31,6 +31,15 @@
           hash = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
         };
       }
+    {
+        name = "fast-zsh-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zdharma-continuum";
+          repo = "fast-syntax-highlighting";
+          rev = "cf318e06a9b7c9f2219d78f41b46fa6e06011fd9";
+          hash = "sha256-1bmrb724vphw7y2gwn63rfssz3i8lp75ndjvlk5ns1g35ijzsma5";
+        };
+      }
   ];
 
   prezto = {
@@ -40,7 +49,7 @@
           keymap = "vi";
       };
       pmodules = [
-          "syntax-highlighting"
+          #"syntax-highlighting"
           "editor"
           "environment"
           "history"

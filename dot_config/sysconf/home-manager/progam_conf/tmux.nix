@@ -12,7 +12,7 @@
       terminal = "xterm-256color";
       plugins = with pkgs; [
           tmuxPlugins.vim-tmux-navigator
-          tmuxPlugins.cattpuccin
+          tmuxPlugins.catppuccin
           tmuxPlugins.yank
       ];
       extraConfig = ''

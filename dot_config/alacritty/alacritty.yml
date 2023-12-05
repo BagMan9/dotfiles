@@ -72,10 +72,10 @@ cursor:
 
 live_config_reload: true
 
-#shell:
-#  program: /etc/profiles/per-user/isaacgrannis/bin/zsh
-#  args:
-#    - -l
-#    - -c
-#    - "tmux attach || tmux"
+shell:
+  program: /etc/profiles/per-user/isaacgrannis/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 

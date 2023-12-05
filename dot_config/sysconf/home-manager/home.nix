@@ -7,15 +7,6 @@ let
       ln -s $out $out/zsh-prezto/contrib/
     '';
   });
-
-  pkgs = import (builtins.fetchGit {
-      name = "my-tmux-3.2a";
-      url = "https://github.com/NixOS/nixpkgs/";
-      ref = "refs/heads/nixpkgs-unstable";
-      rev = "6e3a86f2f73a466656a401302d3ece26fba401d9";
-  }) {};
-
-  tmux_oldv = pkgs.tmux;
 in
 {
   home.username = "isaacgrannis";

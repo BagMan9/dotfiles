@@ -38,7 +38,6 @@ in
     pkgs.poetry
     pkgs.universal-ctags
     pkgs.deno
-    nix-prefetch-git
 	];
 
   # Fonts

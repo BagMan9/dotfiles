@@ -7,9 +7,9 @@ return {
     end,
     opts = {
       {
-        theme = "snow"
+        theme = "snow",
       },
-    }
+    },
   },
   {
     "petertriho/nvim-scrollbar",
@@ -47,7 +47,7 @@ return {
         },
         git_status = {
           symbols = {
-            renamed  = "󰁕",
+            renamed = "󰁕",
             unstaged = "󰄱",
           },
         },
@@ -69,8 +69,8 @@ return {
           Struct = { icon = "󰌗", hl = "Type" },
           Operator = { icon = "󰆕", hl = "Operator" },
           TypeParameter = { icon = "󰊄", hl = "Type" },
-          StaticMethod = { icon = '󰠄 ', hl = 'Function' },
-        }
+          StaticMethod = { icon = "󰠄 ", hl = "Function" },
+        },
       },
     },
   },

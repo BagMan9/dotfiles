@@ -11,10 +11,10 @@
       prefix = "C-Space";
       terminal = "xterm-256color";
       plugins = with pkgs.tmuxPlugins; [
+          vim-tmux-focus-events
           vim-tmux-navigator
           yank
           tmux-fzf
-          power-theme
           prefix-highlight
           battery
           resurrect

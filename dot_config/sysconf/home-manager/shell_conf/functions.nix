@@ -10,7 +10,7 @@ let
           local prevSession=1
         fi
         echo "{\"organizationId\":null,\"folderId\":null,\"type\":2,\"name\":\"$2\",\"notes\":\"$(cat $1 | base64)\",\"favorite\":false,\"fields\":[],\"login\":null,\"secureNote\":{\"type\":0},\"card\":null,\"identity\":null}" | bw encode | bw create item 
-        if [$prevSession = 0]
+        if [$prevSession = 1]
         then
           bw lock
         fi

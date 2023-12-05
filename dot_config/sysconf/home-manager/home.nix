@@ -38,6 +38,7 @@ in
     pkgs.poetry
     pkgs.universal-ctags
     pkgs.deno
+    pkgs.reattach-to-user-namespace
 	];
 
   # Fonts

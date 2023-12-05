@@ -39,6 +39,7 @@ in
     pkgs.universal-ctags
     pkgs.deno
     pkgs.reattach-to-user-namespace
+    pkgs.pam-reattach
 	];
 
   # Fonts

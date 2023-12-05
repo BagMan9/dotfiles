@@ -4,9 +4,13 @@ return {
     lazy = true,
   },
   {
+    "catppuccin/nvim",
+    lazy = true,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfox",
+      colorscheme = "catppuccin",
     },
   },
 }

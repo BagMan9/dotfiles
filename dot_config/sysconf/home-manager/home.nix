@@ -7,6 +7,15 @@ let
       ln -s $out $out/zsh-prezto/contrib/
     '';
   });
+
+  pkgs = import (builtins.fetchGit {
+      name = "my-tmux-3.2a";
+      url = "https://github.com/NixOS/nixpkgs/";
+      ref = "refs/heads/nixpkgs-unstable";
+      rev = "6e3a86f2f73a466656a401302d3ece26fba401d9";
+  }) {};
+
+  tmux_oldv = pkgs.tmux;
 in
 {
   home.username = "isaacgrannis";
@@ -22,7 +31,7 @@ in
     pkgs.fd
     pkgs.fzf
     pkgs.lazygit
-    pkgs.tmux
+    tmux_oldv
     pkgs.bitwarden-cli
     pkgs.python311
     pkgs.python311Packages.pip
@@ -50,7 +59,7 @@ in
   programs.fzf = (import ./progam_conf/fzf.nix {a=0;});
 
   # Tmux
-  programs.tmux = (import ./progam_conf/tmux.nix {pkgs=pkgs;});
+  #programs.tmux = (import ./progam_conf/tmux.nix {pkgs=pkgs;});
   
   # Git
   programs.git = (import ./progam_conf/git.nix {a=0;});

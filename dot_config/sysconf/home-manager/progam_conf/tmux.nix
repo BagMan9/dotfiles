@@ -15,7 +15,6 @@
           vim-tmux-navigator
           yank
           tmux-fzf
-          prefix-highlight
           battery
           resurrect
           tmux-thumbs

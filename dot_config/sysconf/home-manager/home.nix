@@ -51,8 +51,6 @@ in
   # FZF
   programs.fzf = (import ./progam_conf/fzf.nix {a=0;});
 
-  # Tmux
-  #programs.tmux = (import ./progam_conf/tmux.nix {pkgs=pkgs;});
   
   # Git
   programs.git = (import ./progam_conf/git.nix {a=0;});

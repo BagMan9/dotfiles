@@ -43,7 +43,7 @@ let
             export BW_SESSION=$(bw unlock --raw)
             local prevSession=1
           done
-          chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update
+          chezmoi add ~/.config/sysconf/flake.lock && chezmoi add ~/.config/nvim/lazy-lock.json && chezmoi update
           darwin-rebuild switch --flake ~/.config/sysconf/
 
         }

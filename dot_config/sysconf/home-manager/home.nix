@@ -36,7 +36,6 @@ in
     pkgs.gimp
     pkgs.docker
     pkgs.poetry
-    pkgs.cargo
     pkgs.universal-ctags
 	];
 

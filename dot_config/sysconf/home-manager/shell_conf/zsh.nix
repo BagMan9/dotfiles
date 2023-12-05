@@ -8,7 +8,7 @@
       source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
       ZSH_TMUX_AUTOSTART=true
-      source $ZDOTDIR/plugins/catppuccin-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
+      source $ZDOTDIR/plugins/catppuccin-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
   '';
 
   initExtra = ''

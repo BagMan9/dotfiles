@@ -8,6 +8,7 @@
       source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
       ZSH_TMUX_AUTOSTART=true
+      source $ZDOTDIR/plugins/catppuccin-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
   '';
 
   initExtra = ''
@@ -29,6 +30,15 @@
           repo = "fzf-tab";
           rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
           hash = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
+        };
+      }
+    {
+        name = "catppuccin-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "catppuccin";
+          repo = "zsh-syntax-highlighting";
+          rev = "06d519c20798f0ebe275fc3a8101841faaeee8ea";
+          hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
         };
       }
   ];

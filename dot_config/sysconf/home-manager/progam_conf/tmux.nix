@@ -24,6 +24,7 @@
       extraConfig = ''
         bind v split-window -v -c "#{pane_current_path}"
         bind h split-window -h -c "#{pane_current_path}"
+        set -g status-right '#{battery_status_bg} Batt: #{battery_icon} #{battery_percentage} #{prefix_highlight} | %a %h-%d %H:%M '
         set-option -sa terminal-features ',xterm-256color:RGB'
       '';
 }

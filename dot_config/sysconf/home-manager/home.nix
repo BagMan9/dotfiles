@@ -41,6 +41,7 @@ in
     pkgs.reattach-to-user-namespace
     pkgs.pam-reattach
     pkgs.zoxide
+    pkgs.python311Packages.libtmux
 	];
 
   # Fonts

@@ -12,7 +12,7 @@
           "middleclick"
       ];
       taps = [
-        "Morantron/tmux-fingers"
+        "Morantron/tmux-fingers";
       ]
       global = {
           autoUpdate = false;

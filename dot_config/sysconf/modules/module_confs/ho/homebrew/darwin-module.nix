@@ -4,6 +4,7 @@
       enable = true;
       brews = [
         "python-tk"
+        "tmux-fingers"
       ];
       casks = [
           "coteditor"

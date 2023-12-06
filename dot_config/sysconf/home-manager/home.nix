@@ -40,6 +40,7 @@ in
     pkgs.deno
     pkgs.reattach-to-user-namespace
     pkgs.pam-reattach
+    pkgs.zoxide
 	];
 
   # Fonts

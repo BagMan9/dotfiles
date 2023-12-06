@@ -4,7 +4,6 @@
       enable = true;
       brews = [
         "python-tk"
-        "tmux-fingers"
       ];
       casks = [
           "coteditor"
@@ -12,6 +11,9 @@
           "kindle-previewer"
           "middleclick"
       ];
+      taps = [
+        "Morantron/tmux-fingers"
+      ]
       global = {
           autoUpdate = false;
       };

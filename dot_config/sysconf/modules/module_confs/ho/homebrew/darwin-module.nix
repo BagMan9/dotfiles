@@ -10,6 +10,7 @@
           "disk-inventory-x"
           "kindle-previewer"
           "middleclick"
+          "tmux-fingers"
       ];
       global = {
           autoUpdate = false;

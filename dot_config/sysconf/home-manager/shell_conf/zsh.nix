@@ -18,6 +18,8 @@
       }
 
       add-zsh-hook chpwd tmux-window-name
+
+      eval "$(zoxide init zsh)"
   '' + (import ./functions.nix {a=0;});
 
   profileExtra = ''

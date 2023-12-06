@@ -4,13 +4,13 @@
       enable = true;
       brews = [
         "python-tk"
+        "tmux-fingers"
       ];
       casks = [
           "coteditor"
           "disk-inventory-x"
           "kindle-previewer"
           "middleclick"
-          "tmux-fingers"
       ];
       global = {
           autoUpdate = false;

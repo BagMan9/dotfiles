@@ -43,6 +43,7 @@ in
     pkgs.zoxide
     pkgs.python311Packages.libtmux
     pkgs.yq
+    pkgs.btop
 	];
 
   # Fonts

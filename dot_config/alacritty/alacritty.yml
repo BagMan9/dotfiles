@@ -9,11 +9,8 @@ env:
   TERM: xterm-256color
 
 window:
-  dimensions:
-    columns: 190
-    lines: 50
-  
-  decorations: None
+  decorations: Full
+  decorations_theme_variant: Dark
   
   opacity: 1.0
 
@@ -21,7 +18,7 @@ window:
 
   title: Terminal
 
-  dynamic_title: false
+  dynamic_title: true
 
 scrolling:
   history: 10000

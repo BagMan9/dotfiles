@@ -44,6 +44,7 @@ in
     pkgs.python311Packages.libtmux
     pkgs.yq
     pkgs.btop
+    pkgs.mc
 	];
 
   # Fonts

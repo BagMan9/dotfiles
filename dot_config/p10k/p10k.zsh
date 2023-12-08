@@ -47,7 +47,7 @@
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     status                  # exit code of the last command
-    command_execution_time  # duration of the last command
+    #command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
@@ -86,7 +86,7 @@
     google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     toolbox                 # toolbox name (https://github.com/containers/toolbox)
     context                 # user@hostname
-    nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
+    #nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     nnn                     # nnn shell (https://github.com/jarun/nnn)
     lf                      # lf shell (https://github.com/gokcehan/lf)
@@ -96,7 +96,7 @@
     nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
     chezmoi_shell           # chezmoi shell (https://www.chezmoi.io/)
     # vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
-    # vpn_ip                # virtual private network indicator
+    #vpn_ip                # virtual private network indicator
     # load                  # CPU load
     # disk_usage            # disk usage
     # ram                   # free RAM
@@ -1575,16 +1575,16 @@
   typeset -g POWERLEVEL9K_VPN_IP_FOREGROUND=81
   # When on VPN, show just an icon without the IP address.
   # Tip: To display the private IP address when on VPN, remove the next line.
-  typeset -g POWERLEVEL9K_VPN_IP_CONTENT_EXPANSION=
+  #typeset -g POWERLEVEL9K_VPN_IP_CONTENT_EXPANSION=
   # Regular expression for the VPN network interface. Run `ifconfig` or `ip -4 a show` while on VPN
   # to see the name of the interface.
   typeset -g POWERLEVEL9K_VPN_IP_INTERFACE='(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)'
   # If set to true, show one segment per matching network interface. If set to false, show only
   # one segment corresponding to the first matching network interface.
   # Tip: If you set it to true, you'll probably want to unset POWERLEVEL9K_VPN_IP_CONTENT_EXPANSION.
-  typeset -g POWERLEVEL9K_VPN_IP_SHOW_ALL=false
+  typeset -g POWERLEVEL9K_VPN_IP_SHOW_ALL=true
   # Custom icon.
-  # typeset -g POWERLEVEL9K_VPN_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_VPN_IP_VISUAL_IDENTIFIER_EXPANSION='󰖂'
 
   ###########[ ip: ip address and bandwidth usage for a specified network interface ]###########
   # IP color.
@@ -1706,7 +1706,7 @@
   #   - always:   Trim down prompt when accepting a command line.
   #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
   #               typed after changing current working directory.
-  typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=always
+  typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=same-dir
 
   # Instant prompt mode.
   #

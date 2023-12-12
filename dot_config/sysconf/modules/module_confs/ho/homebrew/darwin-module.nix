@@ -11,6 +11,7 @@
           "disk-inventory-x"
           "kindle-previewer"
           "middleclick"
+          "gimp"
       ];
       taps = [
         "Morantron/tmux-fingers"

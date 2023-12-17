@@ -45,6 +45,7 @@ in
     pkgs.yq
     pkgs.btop
     pkgs.mc
+    pkgs.nodejs-slim_20
 	];
 
   # Fonts

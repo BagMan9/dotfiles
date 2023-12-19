@@ -24,7 +24,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.yanky" },
     -- Language Configs
     { import = "lazyvim.plugins.extras.lang.python" },
-    -- { import = "lazyvim.plugins.extras.lang.python-semshi" },
+    { import = "lazyvim.plugins.extras.lang.python-semshi" },
 
     { import = "lazyvim.plugins.extras.lang.clangd" },
 

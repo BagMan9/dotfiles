@@ -48,7 +48,7 @@ return {
         git_status = {
           symbols = {
             renamed = "󰁕",
-            unstaged = "󰄱",
+            unstaged = "󰘌",
           },
         },
       },

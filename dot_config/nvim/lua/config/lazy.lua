@@ -9,19 +9,30 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
+    -- Import LazyVim
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- Debugging
     { import = "lazyvim.plugins.extras.dap.core" },
+    -- Extra Editor Tools
     { import = "lazyvim.plugins.extras.editor.navic" },
-    { import = "lazyvim.plugins.extras.util.project" },
+    { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+    -- Null-LS Replacement
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
+    -- Coding Configs
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
+    -- Language Configs
     { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.python-semshi" },
+
     { import = "lazyvim.plugins.extras.lang.clangd" },
+
     { import = "lazyvim.plugins.extras.lang.docker" },
+
     { import = "lazyvim.plugins.extras.lang.yaml" },
+
     { import = "lazyvim.plugins.extras.lang.json" },
+
     { import = "plugins" },
   },
   defaults = {

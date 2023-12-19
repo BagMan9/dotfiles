@@ -1,5 +1,6 @@
 return {
   {
+    -- Git Wrapper [":G add "]
     "tpope/vim-fugitive",
   },
   {
@@ -9,10 +10,11 @@ return {
     end,
   },
   {
+    -- Github Issues
     "pwntester/octo.nvim",
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
     },
     config = function()
       require("octo").setup()

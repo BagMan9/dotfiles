@@ -6,8 +6,6 @@ return {
       diagnostics = {
         virtual_text = false,
       },
-      ---@type lspconfig.options
-      servers = {},
     },
   },
   {
@@ -35,7 +33,6 @@ return {
     opts = {
       ensure_installed = {
         "black",
-        "jedi-language-server",
       },
     },
   },

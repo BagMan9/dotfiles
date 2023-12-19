@@ -16,6 +16,7 @@ require("lazy").setup({
     -- Extra Editor Tools
     { import = "lazyvim.plugins.extras.editor.navic" },
     { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+    { import = "lazyvim.plugins.extras.editor.leap" },
     -- Null-LS Replacement
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- Coding Configs

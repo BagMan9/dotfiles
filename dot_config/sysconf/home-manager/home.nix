@@ -1,13 +1,4 @@
 { config, pkgs, ... }:
-let
-  addSymlink = pkg: pkg.overrideAttrs (oldAttrs: rec {
-    postInstall = ''
-      ${oldAttrs.postInstall or ""}
-      mkdir -p $out/zsh-prezto/contrib/
-      ln -s $out $out/zsh-prezto/contrib/
-    '';
-  });
-in
 {
   home.username = "isaacgrannis";
   # Commented out the below for now, zsh seems to mess with it in some capacity and eliminating it did not break anything else
@@ -16,17 +7,18 @@ in
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
     pkgs.chezmoi
+    pkgs.tmux
     pkgs.neovim
     pkgs.git
     pkgs.ripgrep
     pkgs.fd
     pkgs.fzf
     pkgs.lazygit
-    pkgs.tmux
     pkgs.bitwarden-cli
     pkgs.python311
     pkgs.python311Packages.pip
     pkgs.python311Packages.tkinter
+    pkgs.python311Packages.libtmux
     pkgs.pipx
     pkgs.micromamba
     pkgs.zsh
@@ -37,11 +29,9 @@ in
     pkgs.docker
     pkgs.poetry
     pkgs.universal-ctags
-    pkgs.deno
     pkgs.reattach-to-user-namespace
     pkgs.pam-reattach
     pkgs.zoxide
-    pkgs.python311Packages.libtmux
     pkgs.yq
     pkgs.btop
     pkgs.mc
@@ -72,10 +62,6 @@ in
 
 
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
   };
 
   home.sessionVariables = {

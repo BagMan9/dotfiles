@@ -19,22 +19,6 @@ let
       }
 
     '';
-    createPythonDevEnv = ''
-      function pdev () {
-        if [[ $1 == "init" ]] then
-          mkdir -p $2
-          python -m venv $2/venv/
-          cd $2
-          git init
-          source venv/bin/activate
-        elif [[ $1 == "activate" ]] then 
-          source venv/bin/activate
-        elif [[ $1 == "exit" ]] then
-          deactivate
-        fi
-      }
-
-    '';
     fullUpgrade= ''
       function fullUpgrade () {
           local prevSession=0
@@ -56,19 +40,6 @@ let
         }
     '';
 
-    PiDevelop = ''
-      function enterpi () {
-          sshfs -o allow_other rpi:/home/csc-student/ ~/mnt/pi-remote
-          cd ~/mnt/pi-remote/
-          tmux split-window -v "ssh rpi"
-          nvim .
-        }
-    '';
-    PiUnDev = ''
-      function piexit () {
-          umount ~/mnt/pi-remote/
-        }
-    '';
   };
     concatAttrs = attrs: builtins.concatStringsSep "" (builtins.attrValues attrs);
 in

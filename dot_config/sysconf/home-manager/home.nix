@@ -6,36 +6,36 @@
 
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
-    pkgs.chezmoi
-    pkgs.tmux
-    pkgs.neovim
-    pkgs.git
-    pkgs.ripgrep
-    pkgs.fd
-    pkgs.fzf
-    pkgs.lazygit
-    pkgs.bitwarden-cli
-    pkgs.python311
-    pkgs.python311Packages.pip
-    pkgs.python311Packages.tkinter
-    pkgs.python311Packages.libtmux
-    pkgs.pipx
-    pkgs.micromamba
-    pkgs.zsh
-    pkgs.zsh-prezto
-    pkgs.delta
+    chezmoi
+    tmux
+    neovim
+    it
+    ripgrep
+    fd
+    fzf
+    lazygit
+    bitwarden-cli
+    python311
+    python311Packages.pip
+    python311Packages.tkinter
+    python311Packages.libtmux
+    pipx
+    micromamba
+    zsh
+    zsh-prezto
+    delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
-    pkgs.gimp
-    pkgs.docker
-    pkgs.poetry
-    pkgs.universal-ctags
-    pkgs.reattach-to-user-namespace
-    pkgs.pam-reattach
-    pkgs.zoxide
-    pkgs.yq
-    pkgs.btop
-    pkgs.mc
-    pkgs.nodejs_20
+    gimp
+    docker
+    poetry
+    universal-ctags
+    reattach-to-user-namespace
+    pam-reattach
+    zoxide
+    yq
+    btop
+    mc
+    nodejs_20
 	];
 
   # Fonts
@@ -69,6 +69,5 @@
     VISUAL="nvim";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

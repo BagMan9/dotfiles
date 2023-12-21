@@ -9,7 +9,7 @@
     chezmoi
     tmux
     neovim
-    it
+    git
     ripgrep
     fd
     fzf

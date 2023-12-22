@@ -6,7 +6,9 @@ local i = ls.insert_node
 
 return {
   -- A snippet that expands the trigger "hi" into the string "Hello, world!".
-  ls.snippet({ trig = "hi" }, { t("Hello, world!") }),
-
-  ls.snippet({ trig = "foo" }, { t("Another snippet.") }),
+  ls.add_snippets("lua", {
+    s("hello", {
+      t("Hello, world!"),
+    }),
+  }),
 }

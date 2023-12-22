@@ -14,3 +14,4 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<C-n>", "<cmd>Neotree focus<cr>", { desc = "Toggle Neotree" })
+map("n", "<leader>r", "<cmd>chezmoi apply<cr>", { desc = "Apply Chezmoi Config" })

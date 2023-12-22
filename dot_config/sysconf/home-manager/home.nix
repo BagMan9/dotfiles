@@ -36,6 +36,7 @@
     btop
     mc
     nodejs_20
+    rustup
 	];
 
   # Fonts

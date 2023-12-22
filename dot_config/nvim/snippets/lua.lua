@@ -30,7 +30,7 @@ return {
   -- a snippet that expands the trigger "hi" into the string "hello, world!".
   ls.add_snippets("lua", {
     s("hello", {
-      t("hello, world!"),
+      t("Hello, World!"),
     }),
   }),
 }

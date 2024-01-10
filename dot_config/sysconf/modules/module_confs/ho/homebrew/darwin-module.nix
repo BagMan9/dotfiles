@@ -5,6 +5,7 @@
       brews = [
         "python-tk"
         "tmux-fingers"
+        "gnuradio"
       ];
       casks = [
           "coteditor"

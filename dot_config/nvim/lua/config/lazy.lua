@@ -20,7 +20,7 @@ require("lazy").setup({
     -- Null-LS Replacement
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- Coding Configs
-    { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     -- Language Configs
     { import = "lazyvim.plugins.extras.lang.python" },

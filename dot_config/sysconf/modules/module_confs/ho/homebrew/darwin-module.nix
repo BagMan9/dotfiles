@@ -13,6 +13,7 @@
           "kindle-previewer"
           "middleclick"
           "gimp"
+          "bluetility"
       ];
       taps = [
         "Morantron/tmux-fingers"

@@ -18,6 +18,6 @@ map("n", "<leader>r", "<cmd>!chezmoi apply<cr>", { desc = "Apply Chezmoi Config"
 map(
   "n",
   "<leader>h",
-  "<cmd>!rsync ~/Dev/DataStructs/MeCode/ ~/Library/CloudStorage/Box-Box/Grannis_csc211<cr>",
+  "<cmd>!rsync -avh --delete ~/Dev/DataStructs/MeCode/ ~/Library/CloudStorage/Box-Box/Grannis_csc211<cr>",
   { desc = "Sync Struct Folder" }
 )

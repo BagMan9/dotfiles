@@ -14,10 +14,16 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<C-n>", "<cmd>Neotree focus<cr>", { desc = "Toggle Neotree" })
-map("n", "<leader>r", "<cmd>!chezmoi apply<cr>", { desc = "Apply Chezmoi Config" })
+map("n", "<leader>R", "<cmd>!chezmoi apply<cr>", { desc = "Apply Chezmoi Config" })
 map(
   "n",
-  "<leader>h",
+  "<leader>rd",
   "<cmd>!rsync -avh --delete ~/Dev/DataStructs/MeCode/ ~/Library/CloudStorage/Box-Box/Grannis_csc211<cr>",
   { desc = "Sync Struct Folder" }
+)
+map(
+  "n",
+  "<leader>rs",
+  "<cmd>!rsync -avz --delete cscvm:/home/isaacgrannis/oslab/ ~/Dev/Operating Systems/oslab<cr>",
+  { desc = "Sync OS Folder" }
 )

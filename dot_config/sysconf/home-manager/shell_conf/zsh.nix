@@ -19,7 +19,9 @@
 
       add-zsh-hook chpwd tmux-window-name
 
-      eval "$(zoxide init zsh)"
+      eval "$(zoxide init zsh)
+      path+=('/Users/isaacgrannis/.local/bin/')
+      "
   '' + (import ./functions.nix {a=0;});
 
   profileExtra = ''

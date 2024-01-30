@@ -24,6 +24,6 @@ map(
 map(
   "n",
   "<leader>rs",
-  "<cmd>!rsync -az --delete ~/Dev/Operating\\ Systems/oslab/ cscvm:/home/isaacgrannis/oslab/<cr>",
-  { desc = "Sync OS Folder" }
+  "<cmd>!rsync -az --delete ~/Dev/Operating\\ Systems/oslab/linux-11/ cscvm:/home/isaacgrannis/oslab/linux-11<cr>",
+  { desc = "Sync Linux Kernel Folder" }
 )

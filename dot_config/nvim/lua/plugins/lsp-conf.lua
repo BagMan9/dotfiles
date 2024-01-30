@@ -41,4 +41,12 @@ return {
     "folke/trouble.nvim",
     opts = { use_diagnostic_signs = true },
   },
+  {
+    "p00f/clangd_extensions.nvim",
+    opts = {
+      inlay_hints = {
+        inline = true,
+      },
+    },
+  },
 }

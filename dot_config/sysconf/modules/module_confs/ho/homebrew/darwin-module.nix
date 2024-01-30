@@ -6,9 +6,6 @@
         "python-tk"
         "tmux-fingers"
         "gnuradio"
-        "fuse-t"
-        "fuse-t-sshfs"
-        "macos-fuse-t/homebrew-cask/fuse-t"
       ];
       casks = [
           "coteditor"

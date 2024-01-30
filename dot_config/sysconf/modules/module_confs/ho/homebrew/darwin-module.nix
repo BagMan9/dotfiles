@@ -6,6 +6,8 @@
         "python-tk"
         "tmux-fingers"
         "gnuradio"
+        "fuse-t"
+        "fuse-t-sshfs"
       ];
       casks = [
           "coteditor"
@@ -17,6 +19,7 @@
       ];
       taps = [
         "Morantron/tmux-fingers"
+        "macos-fuse-t/homebrew-cask"
       ];
       global = {
           autoUpdate = false;

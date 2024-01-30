@@ -3,6 +3,6 @@
 -- Add any additional options here
 --
 
-vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
+-- vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
 
 vim.o.termguicolors = true

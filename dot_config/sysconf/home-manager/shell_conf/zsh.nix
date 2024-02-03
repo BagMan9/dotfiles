@@ -21,6 +21,7 @@
 
       eval "$(zoxide init zsh)
       path+=('/Users/isaacgrannis/.local/bin/')
+      "
 
       # Shell-GPT integration ZSH v0.2
       _sgpt_zsh() {

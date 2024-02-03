@@ -24,7 +24,7 @@
       "
 
       # Shell-GPT integration ZSH v0.2
-      _sgpt_zsh() {
+      function _sgpt_zsh() {
       if [[ -n "$BUFFER" ]]; then
             _sgpt_prev_cmd=$BUFFER
             BUFFER+="⌛"

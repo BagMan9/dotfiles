@@ -13,7 +13,7 @@
 
   initExtraBeforeCompInit = ''
       eval "$(zoxide init zsh)
-  ''
+  '';
 
   initExtra = ''
   [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh

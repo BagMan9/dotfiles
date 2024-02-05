@@ -41,7 +41,6 @@
         echo "Command '$formatted' not found, did you mean:"
         sgpt --shell "User input: '$formatted'. If it seems like the wrong command, just output the correct one."
       }
-      export -f command_not_found_handler
   '';
 
   profileExtra = ''

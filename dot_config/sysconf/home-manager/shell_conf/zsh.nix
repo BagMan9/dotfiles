@@ -53,6 +53,11 @@
           dotExpansion = true;
           keymap = "vi";
       };
+      extraConfig = ''
+      zstyle ':prezto:module:utility' safe-ops 'no'
+      zstyle ':prezto:module:utility' correct 'no'
+      '';
+
       pmodules = [
           "syntax-highlighting"
           "editor"
@@ -77,10 +82,6 @@
               "cursor"
               "root"
           ];
-      extraConfig = ''
-      zstyle ':prezto:module:utility' safe-ops 'no'
-      zstyle ':prezto:module:utility' correct 'no'
-      '';
       };
       prompt.theme = "powerlevel10k";
       tmux.autoStartLocal = true;

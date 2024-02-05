@@ -12,13 +12,14 @@
   '';
 
   initExtraBeforeCompInit = ''
-      eval "$(zoxide init zsh)
   '';
 
   initExtra = ''
   [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
 
   path+=('/Users/isaacgrannis/.local/bin/')"
+  eval "$(zoxide init zsh)
+
   '' + (import ./functions.nix {a=0;}) + ''
       command_not_found_handler() {
         local input="$*"

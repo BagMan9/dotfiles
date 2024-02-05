@@ -8,4 +8,6 @@
     nvedit="chezmoi edit ~/.config/nvim";
     fullup="fullUpgrade";
     checksha="openssl sha256";
+    shellgen="sgpt -s";
+    codegen="sgpt -c";
 }

@@ -10,5 +10,5 @@
     checksha="openssl sha256";
     shellgen="sgpt -s";
     codegen="sgpt -c";
-    cd="z"
+    cd="z";
 }

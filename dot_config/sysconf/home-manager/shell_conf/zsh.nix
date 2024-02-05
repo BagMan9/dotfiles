@@ -9,20 +9,45 @@
       fi
       ZSH_TMUX_AUTOSTART=true
       source $ZDOTDIR/plugins/catppuccin-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-      eval "$(zoxide init zsh)
   '';
 
-  initExtra = ''
-      [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
+  initExtraBeforeCompInit = ''
+      eval "$(zoxide init zsh)
+  ''
 
-      path+=('/Users/isaacgrannis/.local/bin/')
-      "
-  '' + (import ./functions.nix {a=0;});
+  initExtra = ''
+  [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
+
+  path+=('/Users/isaacgrannis/.local/bin/')"
+  '' + (import ./functions.nix {a=0;}) + ''
+      command_not_found_handler() {
+        local input="$*"
+        local formatted=""
+        local arg
+
+        # Loop over each argument in the input string
+        for arg in $input; do
+        # If the argument contains spaces, enclose it in quotes
+        if [[ $arg == *[[:space:]]* ]]; then
+            arg="\"$arg\""
+        fi
+
+        # Append the argument to the formatted string
+        formatted+="$arg "
+        done
+        # Remove the trailing space
+        formatted=''${formatted%?}
+
+        echo "Command '$formatted' not found, did you mean:"
+        sgpt --shell "User input: '$formatted'. If it seems like the wrong command, just output the correct one."
+      }
+      export -f command_not_found_handler
+  '';
 
   profileExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv)"
   '';
-
+  
   shellAliases = (import ./aliases.nix {a=0;});
 
 

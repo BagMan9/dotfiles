@@ -14,9 +14,6 @@
 
   initExtra = ''
       [[ ! -f ~/.config/p10k/p10k.zsh ]] || source ~/.config/p10k/p10k.zsh
-      tmux-window-name() {
-	        ($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
-      }
 
       path+=('/Users/isaacgrannis/.local/bin/')
       "
@@ -65,8 +62,10 @@
           "directory"
           "spectrum"
           "utility"
-          "completion"
           "git"
+          "osx"
+          "archive"
+          "completion"
           "prompt"
       ];
       syntaxHighlighting = {
@@ -78,6 +77,10 @@
               "cursor"
               "root"
           ];
+      extraConfig = ''
+      zstyle ':prezto:module:utility' safe-ops 'no'
+      zstyle ':prezto:module:utility' correct 'no'
+      ''
       };
       prompt.theme = "powerlevel10k";
       tmux.autoStartLocal = true;

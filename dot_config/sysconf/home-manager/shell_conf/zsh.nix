@@ -22,11 +22,6 @@
       eval "$(zoxide init zsh)
       path+=('/Users/isaacgrannis/.local/bin/')
       "
-
-     fi
-        }
-      zle -N _sgpt_zsh
-      bindkey ^l _sgpt_zsh
   '' + (import ./functions.nix {a=0;});
 
   profileExtra = ''

@@ -9,6 +9,7 @@
       fi
       ZSH_TMUX_AUTOSTART=true
       source $ZDOTDIR/plugins/catppuccin-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+      eval "$(zoxide init zsh)
   '';
 
   initExtra = ''
@@ -19,7 +20,6 @@
 
       add-zsh-hook chpwd tmux-window-name
 
-      eval "$(zoxide init zsh)
       path+=('/Users/isaacgrannis/.local/bin/')
       "
   '' + (import ./functions.nix {a=0;});

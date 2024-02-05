@@ -9,10 +9,10 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: Full
-  
+  decorations: full
+
   decorations_theme_variant: Dark
-  
+
   opacity: 1.0
 
   startup_mode: Windowed
@@ -23,11 +23,11 @@ window:
 
 scrolling:
   history: 10000
-  
+
   multiplier: 3
 
 font:
-  normal: 
+  normal:
     family: "Hurmit Nerd Font"
     style: Regular
   bold:
@@ -39,8 +39,6 @@ font:
   bold_italic:
     family: "Hurmit Nerd Font"
     style: Bold Italic
-
-
 
 cursor:
   style:
@@ -55,4 +53,3 @@ shell:
     - -l
     - -c
     - "tmux attach || tmux"
-

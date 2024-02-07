@@ -11,5 +11,5 @@
     shellgen="sgpt -s";
     codegen="sgpt -c";
     cd="z";
-    dl="curl -L -O"
+    dl="curl -L -O";
 }

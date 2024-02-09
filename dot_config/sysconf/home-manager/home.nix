@@ -26,15 +26,12 @@
     delta
     (nerdfonts.override { fonts = [ "Hermit" ]; })
     gimp
-    docker
     poetry
     universal-ctags
-    reattach-to-user-namespace
-    pam-reattach
     zoxide
-    yq
+    yq #YAML/TOML/XML Processing
     btop
-    mc
+    mc # File Browser
     nodejs_20
     rustup
 	];

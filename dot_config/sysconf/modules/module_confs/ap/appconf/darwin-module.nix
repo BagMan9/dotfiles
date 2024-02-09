@@ -4,8 +4,7 @@
 {
   environment.systemPackages =
     [ pkgs.alacritty
-      pkgs.reattach-to-user-namespace
-      pkgs.pam-reattach
+
     ];
 
   system.activationScripts.applications.text = lib.mkForce ''

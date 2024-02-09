@@ -34,8 +34,7 @@
     mc # File Browser
     nodejs_20
     rustup
-    reattach-to-user-namespace
-    pam-reattach
+
 	];
 
   # Fonts
